@@ -16,9 +16,13 @@ public class TopicService implements Service {
            if (topic == null) {
                result = new Resp("", "404");
            } else {
+               if (topic.values().size() > 0) {
+                   result = new Resp("Created", "200");
+               }
                for (ConcurrentLinkedQueue<String> value : topic.values()) {
                    value.add(req.getParam());
                }
+
            }
         }
         if ("GET".equals(req.httpRequestType())) {

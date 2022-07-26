@@ -2,8 +2,8 @@ package ru.job4j.pooh;
 
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class ReqTest {
 
@@ -72,7 +72,7 @@ public class ReqTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void whenNotGetOrPostMethodThorwException() {
+    public void whenNotGetOrPostMethodThrowException() {
         String ls = System.lineSeparator();
         String content = "PUT /topic/weather/client407 HTTP/1.1" + ls
                 + "Host: localhost:9000" + ls
